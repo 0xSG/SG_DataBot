@@ -1,0 +1,13 @@
+{
+  "name": "firebase-admin",
+  "version": "0.2.6",
+  "engines": {
+    "node": "6.10.2"
+  },
+  "dependencies": {
+    "twit": "2.1.0"
+  },
+  "devDependencies": {
+    "firebase": "^4.12.1"
+  }
+}
