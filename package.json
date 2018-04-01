@@ -1,13 +1,29 @@
 {
-  "name": "firebase-admin",
+  "name": "data_bot",
   "version": "0.2.6",
   "engines": {
     "node": "6.10.2"
   },
   "dependencies": {
+    "node-telegram-bot-api": "^0.30.0",
     "twit": "2.1.0"
   },
   "devDependencies": {
     "firebase": "^4.12.1"
-  }
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xpulsar/SG_DataBot.git"
+  },
+  "author": "https://github.com/0xpulsar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0xpulsar/SG_DataBot/issues"
+  },
+  "homepage": "https://github.com/0xpulsar/SG_DataBot#readme",
+  "description": ""
 }
