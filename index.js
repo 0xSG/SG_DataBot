@@ -17,16 +17,6 @@ ref.child(key).once('value')
 }
 
 
-// var ref = firebase.database().ref();
-// function getData(key){
-//   ref.child(key).once('value', function(snapshot) {
-//     if(snapshot.value()){
-//         //logs everything that is under /user
-//         console.log(snapshot.value());
-//     }
-// });
-//   return snap.val()
-// }
 function logger (key,data){
   var obj1=ref.child(key)
   console.log('function called..')
